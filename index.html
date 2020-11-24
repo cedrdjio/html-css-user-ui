@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="Hero">
+        <div class="FormBox">
+            <!-- <div class="ButtonBox">
+                <div id="Btn"></div>
+                <button type="button" class="ToggleBtn" onclick="Login()">Log In</button>
+                <button type="button" class="ToggleBtn" onclick="Register()">Register</button>
+            </div> -->
+            <div class="SocialIcons" id = "icon" >
+                <a href="index.html"><img src="images/google.png"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src="images/twitter.png"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/instagram.png"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/linkedin.png"></a>
+            </div>
+            <form id="Login" class="InputGroup">
+                <input type="text" class="InputField" placeholder="User Name" required>
+                <input type="password" class="InputField" placeholder="Password" required>
+                <input type="checkbox" class="CheckBox"><span id ="rpasdwr">Remember Password</span>
+                <button type="submit" class="SubmitBtn">Log In</button>
+                <span id ="forgotLink"><a href="#">Forgot password?</a></span>
+                <span id="not">Not a member? </span>
+                <span id = "signUpLink"><a href="#">Signup now</a></span>    
+            </form>
+            <form id="Register" class="InputGroup">
+                <h1> Sign Up</h1>
+                <input type="text" class="InputField" placeholder="User Name" required>
+                <input type="email" class="InputField" placeholder="Name" required>
+                <input type="text" class="InputField" placeholder="email" required>
+                <input type="text" class="InputField" placeholder="password" required>
+                <input type="checkbox" class="CheckBox"><span>I agree to the terms and condition</span>
+                <button type="submit" class="SubmitBtn">Sign Up</button>
+            </form>
+            <form id ="forgot" class = "InputGroup">
+                <input type="text" class="InputField" placeholder="email" required>
+                <button type="submit" class="SubmitBtn">soumetres</button>
+            </form>
+            <form>
+              
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Register");
+        var z = document.getElementById("Btn");
+        var f = document.getElementById("forgot");
+        var i = document.getElementById("icon");
+        const signupLink = document.getElementById("signUpLink");
+        const forgotLink = document.getElementById("forgotLink");
+
+        function Register(){
+            x.style.left = "-500px";
+            y.style.left = "50px";
+            z.style.left = "200px";
+            f.style.left = "500px";
+        } 
+        function Login(){
+            x.style.left = "50px";
+            y.style.left = "550px";
+            z.style.left = "0";
+            f.style.left = "500px";
+        }
+        signupLink.onclick = (()=>{
+            x.style.left = "-500px";
+            y.style.left = "50px";
+            z.style.left = "200px";
+        })
+        forgotLink.onclick= (() =>
+        {
+            x.style.left = "-500px";
+            f.style.left = "50px";
+            i.style.left="500px";
+           
+        })
+    </script>
+</body>
+</html>
